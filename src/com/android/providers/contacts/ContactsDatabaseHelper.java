@@ -413,8 +413,6 @@ public class ContactsDatabaseHelper extends SQLiteOpenHelper {
                 Tables.RAW_CONTACTS + "." + RawContacts.CONTACT_ID;
         public static final String CONCRETE_NAME_VERIFIED =
                 Tables.RAW_CONTACTS + "." + RawContacts.NAME_VERIFIED;
-        public static final String CONCRETE_IS_RESTRICTED =
-                Tables.RAW_CONTACTS + "." + RawContacts.IS_RESTRICTED;
     }
 
     public interface ViewRawContactsColumns {
@@ -1004,8 +1002,7 @@ public class ContactsDatabaseHelper extends SQLiteOpenHelper {
                 RawContacts.SYNC2 + " TEXT, " +
                 RawContacts.SYNC3 + " TEXT, " +
                 RawContacts.SYNC4 + " TEXT, " +
-                RawContacts.CUSTOM_VIBRATION + " TEXT, " +
-                RawContacts.IS_RESTRICTED + " INTEGER " +
+                RawContacts.CUSTOM_VIBRATION + " TEXT " +
         ");");
 
         db.execSQL("CREATE INDEX raw_contacts_contact_id_index ON " + Tables.RAW_CONTACTS + " (" +
@@ -1591,8 +1588,7 @@ public class ContactsDatabaseHelper extends SQLiteOpenHelper {
                 + RawContactsColumns.CONCRETE_SYNC1 + " AS " + RawContacts.SYNC1 + ","
                 + RawContactsColumns.CONCRETE_SYNC2 + " AS " + RawContacts.SYNC2 + ","
                 + RawContactsColumns.CONCRETE_SYNC3 + " AS " + RawContacts.SYNC3 + ","
-                + RawContactsColumns.CONCRETE_SYNC4 + " AS " + RawContacts.SYNC4 + ","
-                + RawContactsColumns.CONCRETE_IS_RESTRICTED + " AS " + RawContacts.IS_RESTRICTED;
+                + RawContactsColumns.CONCRETE_SYNC4 + " AS " + RawContacts.SYNC4;
 
         String baseContactColumns =
                 Contacts.HAS_PHONE_NUMBER + ", "
