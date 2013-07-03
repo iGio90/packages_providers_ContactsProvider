@@ -998,7 +998,7 @@ public class ContactsDatabaseHelper extends SQLiteOpenHelper {
                 RawContacts.SYNC2 + " TEXT, " +
                 RawContacts.SYNC3 + " TEXT, " +
                 RawContacts.SYNC4 + " TEXT, " +
-                RawContacts.CUSTOM_VIBRATION + " TEXT " +
+                RawContacts.CUSTOM_VIBRATION + " TEXT, " +
                 RawContacts.IS_RESTRICTED + " INTEGER " +
         ");");
 
@@ -1586,7 +1586,7 @@ public class ContactsDatabaseHelper extends SQLiteOpenHelper {
                 + RawContactsColumns.CONCRETE_SYNC2 + " AS " + RawContacts.SYNC2 + ","
                 + RawContactsColumns.CONCRETE_SYNC3 + " AS " + RawContacts.SYNC3 + ","
                 + RawContactsColumns.CONCRETE_SYNC4 + " AS " + RawContacts.SYNC4 + ","
-                + RawContactsColumns.CONCRETE_IS_RESTRICTED + " AS " + RawContacts.IS_RESTRICTED;;
+                + RawContactsColumns.CONCRETE_IS_RESTRICTED + " AS " + RawContacts.IS_RESTRICTED;
 
         String baseContactColumns =
                 Contacts.HAS_PHONE_NUMBER + ", "
